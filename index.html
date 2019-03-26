@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/header.js"></script>
     
     <link rel="shortcut icon" href="photo/bb1.ico" type="image/x-icon">
     <title>IT-News</title>
 </head>
+
 <body>
   <div class="container">
       <div class="header-left">
@@ -40,8 +40,6 @@
           <a class="newsh" href="#">Публикации</a>
       </div>
 
-
-     
         <div class="novost1">
           <a><img class="novostphoto" src="photo/novost4.jpeg"></a>
           <a class="novostext" href="#">Qualcomm выиграл судебную тяжбу с Apple</a>
@@ -64,7 +62,10 @@
                <a><img class="novostphoto" src="photo/novost8.jpeg"></a>
                <a class="novostext" href="#">Новый стандарт на базе PCIe 5.0 «свяжет» CPU и GPU</a>
                <p class="podtext">Консорциум CXL представил новый открытый стандарт — Compute Express Link (CXL). Он поможет организовать высокоскоростную связь между процессором и другими устройствами — GPU, FPGA и памятью. В основу CXL 1.0 лег интерфейс PCIe 5.0, спецификация которого ожидается в этом году. Поговорим о технических подробностях и аналогах решения.Консорциум CXL представил новый открытый стандарт — Compute Express Link (CXL).</p>
-                </div>
+
+              </div>
+
+
 
         <div class="mailing">
             <a class="mailmain" href="#">Подпишитесь на рассылку</a>
@@ -72,7 +73,7 @@
             <input class="mail" placeholder="Введите свой e-mail">
             <button type="submit" class="button1">Подписаться</button>
         </div>
-        
+
         <div class="block3">
             <a class="rubricsh">Рубрики</a>
         </div>
@@ -91,10 +92,19 @@
           <a class="rubricstext">Викторины</a>
           <a class="rubricstext">Переводы</a>
           <a class="rubricstext">Рассказы о своих проектах</a>
-          <a class="rubricstext">Компании</a>        
-          
+          <a class="rubricstext">Компании</a>  
+          <div class="layout">
+            <div class="variants">
+                <button onclick="layoutFirst()" class="line" id="1">1</button>
+                <button onclick="layoutSecond()" class="line" id="2">2</button>
+                <button onclick="layoutThird()" class="line" id="3">3</button>
+                <button onclick="layoutThird()" class="line" id="4">4</button>
+    
+            </div>
+        </div>       
         </div>
-
+        
+        
       <div class="footer-left">
         <a class="textfooter" href="#">О проекте</a>
         <a class="textfooter" href="#">Реклама</a>
@@ -112,6 +122,90 @@
 
 
 </div> 
+
+<script>
+  function layoutFirst() {
+      let div1 = document.body.getElementsByClassName("novost1");
+      let div2 = document.body.getElementsByClassName("novost2");
+      let div3 = document.body.getElementsByClassName("novost3");
+      let div4 = document.body.getElementsByClassName("novost4");
+      
+
+      div1[0].style.gridColumn = "1/3";
+      div1[0].style.gridRow = "7/8";
+
+      div2[0].style.gridColumn = "1/3";
+      div2[0].style.gridRow = "6/7";
+
+      div3[0].style.gridColumn = "1/3";
+      div3[0].style.gridRow = "5/6";
+
+      div4[0].style.gridColumn = "1/3";
+      div4[0].style.gridRow = "4/5";
+      
+  }
+
+  function layoutSecond() {
+      let div1 = document.body.getElementsByClassName("novost1");
+      let div2 = document.body.getElementsByClassName("novost2");
+      let div3 = document.body.getElementsByClassName("novost3");
+      let div4 = document.body.getElementsByClassName("novost4");
+      
+
+      div1[0].style.gridColumn = "1/3";
+      div1[0].style.gridRow = "6/7";
+
+      div2[0].style.gridColumn = "1/3";
+      div2[0].style.gridRow = "7/8";
+
+      div3[0].style.gridColumn = "1/3";
+      div3[0].style.gridRow = "4/5";
+
+      div4[0].style.gridColumn = "1/3";
+      div4[0].style.gridRow = "5/6";
+      
+  }
+
+  function layoutThird() {
+      let div1 = document.body.getElementsByClassName("novost1");
+      let div2 = document.body.getElementsByClassName("novost2");
+      let div3 = document.body.getElementsByClassName("novost3");
+      let div4 = document.body.getElementsByClassName("novost4");
+      
+
+      div1[0].style.gridColumn = "1/3";
+      div1[0].style.gridRow = "5/6";
+
+      div2[0].style.gridColumn = "1/3";
+      div2[0].style.gridRow = "4/5";
+
+      div3[0].style.gridColumn = "1/3";
+      div3[0].style.gridRow = "7/8";
+
+      div4[0].style.gridColumn = "1/3";
+      div4[0].style.gridRow = "6/7";
+      
+  }
+
+  function layoutThird() {
+      let div1 = document.body.getElementsByClassName("rubrics");
+      let div2 = document.body.getElementsByClassName("mailing");
+      let div3 = document.body.getElementsByClassName("rubricsh");
+      
+      div1[0].style.gridColumn = "3/4";
+    
+      div2[0].style.gridColumn = "4/5";
+     
+      div3[0].style.gridColumn = "3/4";
+      
+      
+  }
+
+
+</script>
+
+
+
 
 </body>
 </html>
